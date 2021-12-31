@@ -24,18 +24,23 @@ sys.path.append(root_path)
 
 
 
-logo = """
-\033[33m        _  ______      
-\033[33m    ___ |  ___|_  __
-\033[31m    / _ \| |_  \ \/ /\033[0m
-\033[35m    | (_) |  _|  >  <__ _Author : jijue\033[0m
-\033[32m    \___/|_| __/_/\_\__ __ __Version : {version}\033[0m
+logo = '''
 
-\033[32m    #*#*#  https://github.com/bigblackhat/oFx  #*#*#
+                                                
+                                                
+\033[33m`7MM"""Yp, `7MMF'      `7MM"""YMM  `7MN.   `7MF'
+\033[33m  MM    Yb   MM          MM    `7    MMN.    M  
+\033[31m  MM    dP   MM          MM   d      M YMb   M  
+\033[31m  MM"""bg.   MM          MMmmMM      M  `MN. M\033[0m  
+\033[35m  MM    `Y   MM      ,   MM   Y  ,   M   `MM.M  
+\033[35m  MM    ,9   MM     ,M   MM     ,M   M     YMM  
+\033[32m.JMMmmmd9  .JMMmmmmMMM .JMMmmmmMMM .JML.    YM  Author : openx-org\033  Version : {version} 
+
+\033[32m    #*#*#  https://github.com/openx-org/BLEN  #*#*#
 
 \033[33m       _-___________________________________-_
                 
-\033[0m""".format(version=get_local_version(root_path+"/info.ini"))
+\033[0m'''.format(version=get_local_version(root_path+"/info.ini"))
 
 
 
