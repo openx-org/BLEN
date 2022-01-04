@@ -25,7 +25,7 @@ html="""
     <meta charset=utf-8>
     <meta http-equiv=X-UA-Compatible content="IE=edge">
     <meta name=viewport content="width=device-width,initial-scale=1">
-    <title>oFx Report</title>
+    <title>Blen Report</title>
 </head>
 <style>
     body {
@@ -70,7 +70,7 @@ html="""
 </style>
 
 <body>
-    <p class="title">oFx Report</p>
+    <p class="title">Blen Report</p>
     <br>
     <br>
     <p class="vuln">vuln list</p>
@@ -86,7 +86,7 @@ html="""
     <br/>
     <br/>
     <br/>
-    <p>powered by oFx</p>
+    <p>powered by Blen</p>
 </body>
 
 </html>

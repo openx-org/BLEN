@@ -56,7 +56,7 @@ class oFxCenter():
 
     def setproxy(self):
         """
-        set the proxy for oFx running
+        set the proxy for Blen running
 
         return:None
         """

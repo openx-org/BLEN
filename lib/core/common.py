@@ -155,7 +155,7 @@ def get_latest_revision():
     lv = None
     cp = configparser.ConfigParser()
     try:
-        req = requests.get("https://raw.githubusercontent.com/bigblackhat/oFx/master/info.ini",timeout = 15)
+        req = requests.get("https://raw.githubusercontent.com/openx-org/BLEN/master/info.ini",timeout = 15)
         cp.read_string(req.text)
 
         lv = cp["info"]["version"]
@@ -247,9 +247,9 @@ def run(POC_Class,target,proxy=False,output=True,PocRemain="",Alive_mode = False
             pass
 
 def GetCommand():
-    parser = argparse.ArgumentParser(description="oFx framewark of POC test",
-    usage="python3 ofx.py -f [target_path] / -u [url]   -s [poc_path]  --thread 50\n\
-       python3 ofx.py --fofa-search")
+    parser = argparse.ArgumentParser(description="Blen framewark of POC test",
+    usage="python3 Blen.py -f [target_path] / -u [url]   -s [poc_path]  --thread 50\n\
+       python3 Blen.py --fofa-search")
 
     searchengine = parser.add_argument_group("SearchEngine")
     searchengine.add_argument("--fofa-search",action="store_true",help="Fofa Search模式，该参数不需要跟值")

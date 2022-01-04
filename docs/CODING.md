@@ -1,4 +1,4 @@
-# oFx - POC编写规范及要求说明
+# Blen - POC编写规范及要求说明
 
 ## 概述
 
@@ -54,7 +54,7 @@ _info = {
     """,                                # POC描述，写更新描述，没有就不写
 
     "name" : "Demo",                        # 漏洞名称
-    "VulnID" : "oFx-2021-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
+    "VulnID" : "Blen-2021-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
     "AppName" : "",                     # 漏洞应用名称
     "AppVersion" : "",                  # 漏洞应用版本
     "VulnDate" : "2021-06-09",                    # 漏洞公开的时间,不知道就写今天，格式：xxxx-xx-xx
@@ -186,7 +186,7 @@ __________POC提交文件夹必须包含以下文件__________
 
 考虑到每写一个POC都要手动的创建如上目录有点麻烦，因此笔者提供了一个POC目录结构生成器，食用方式如下：
 ```sh
-➜  oFx git:(main) ✗ python3 ofx.py --gen-poc
+➜  Blen git:(main) ✗ python3 Blen.py --gen-poc
 
         _  ______
     ___ |  ___|_  __
@@ -194,7 +194,7 @@ __________POC提交文件夹必须包含以下文件__________
     | (_) |  _|  >  <__ _Author : jijue
     \___/|_| __/_/\_\__ __ __Version : 2.9.1
 
-    #*#*#  https://github.com/bigblackhat/oFx  #*#*#
+    #*#*#  https://github.com/openx-org/BLEN.git  #*#*#
 
        _-___________________________________-_
 
@@ -212,7 +212,7 @@ ___________生成POC目录结构如下____________
                 |__ test_num_1w.txt
                 |__ success_30.txt
 _________________________________________
-POC路径为/Users/jijue/Documents/GitHub/oFx/poc/Apache_Example/RCE/
+POC路径为/Users/jijue/Documents/GitHub/Blen/poc/Apache_Example/RCE/
 ```
 
 

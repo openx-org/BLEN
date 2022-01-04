@@ -5,7 +5,7 @@ try:
     os.path.dirname(os.path.realpath(__file__))
 except Exception:
     err_msg = "your system does not properly handdle non-Ascii path"
-    err_msg += "please move this ofx's directory to other location"
+    err_msg += "please move this Blen's directory to other location"
     exit(err_msg)
 
 from lib.core.data import root_path
@@ -13,7 +13,7 @@ from lib.core.data import root_path
 def check_environment():
     from lib.core.data import PYVERSION
     if PYVERSION.split(".")[0] == "2":
-        err_msg = "oFx does not support python2"
+        err_msg = "Blen does not support python2"
         exit(err_msg)
 check_environment()
 
@@ -21,7 +21,7 @@ check_environment()
 def oFx_Refuse_Win():
     from lib.core.data import IS_WIN
     if IS_WIN:
-        err_msg = "oFx does not support windows system, Kali Linux is recommended"
+        err_msg = "Blen does not support windows system, Kali Linux is recommended"
         exit(err_msg)
 # oFx_Refuse_Win()
 
