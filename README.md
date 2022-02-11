@@ -1,21 +1,33 @@
-#  🖥 BLEN
+#  🖥 奔雷BLEN
 
 
 [![Python 3.x](https://img.shields.io/badge/python-3.x-yellow.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-GPLv3-brown.svg)](https://github.com/openx-org/BLEN/blob/main/LICENSE)
-[![POC_NUM](https://img.shields.io/badge/poc_num-152-orange.svg)](#PocSupport)
+[![POC_NUM](https://img.shields.io/badge/poc_num-139-orange.svg)](#PocSupport)
 ![GitHub Repo stars](https://img.shields.io/github/stars/openx-org/BLEN?color=gree)
 ![GitHub forks](https://img.shields.io/github/forks/openx-org/BLEN?color=blue)
 
 ## 🦌 简介
 
-一个应用于web安全领域的漏洞批量扫描框架，可被应用于但不限于如下场景：
+1、POC数量、经过OpenxLab实验室小伙伴们的不懈努力现已有139个POC；  
 
-> 0Day/1Day全网概念验证(在没有测试环境(各种商业、闭源软件)或懒得搭建测试环境的情况下，直接写POC全网扫描，亲测很爽)
+2、使用python编写、跨平台、并发能力强、扫描速度非常快；  
 
-> 企业内网或对外开放资产的安全评估  
+3、POC模板结构简单，脚本化编程、提供了专门面对开发者的小工具箱，适合用户自定义POC，快速拓展BLEN的检测能力；  
 
-> 简单的拒绝服务攻击(用Url存活检测POC)  
+4、所有POC都是以不对目标产生任何负面影响的宗旨编写的，既能发现缺陷也不会给目标业务造成大的负面影响，能灵活应用于企业与个人之间的安全需求；  
+
+5、POC数更新快；  
+
+一个应用于web安全领域的漏洞批量扫描框架，可被应用于但不限于如下场景：  
+
+> 0day/1day全网概念验证  
+
+> 企业内网或外网资产的安全评估  
+
+> 批量资产存活检测  
+
+> 漏洞平台刷分  
 
 
 ---
@@ -53,9 +65,7 @@ git clone --depth 1 https://github.com/openx-org/BLEN.git BLEN
 ```
 
 ### 🍜 用前提醒
-使用前提醒，BLEN默认每次运行都会有报告和log的输出，分别在output和log文件夹下，出于缓解存储压力的考虑，笔者设定的规则为每次运行时都会删除12小时以前的输出文件，如果该输出文件对使用者有剩余价值，请在运行结束后及时将输出文件移出当前目录或更名为中/英文形式，如果有重要信息被删除，就再扫一遍吧，也快得很  
-
-另外，BLEN如今可以良好的运行于Mac和Kali系统，相信其他linux也可以正常运行，但由于笔者没有Windows测试环境，因此在Windows上运行BLEN可能会发生一些不可预测的错误，请避免在Windows上运行BLEN  
+使用前提醒，BLEN默认每次运行都会有报告和log输出，分别在output与log文件夹下，出于缓解存储压力的考虑，设定的规则为每次运行时都会删除12小时以前的输出文件，如果该输出文件对使用者有剩余价值，请在运行结束后及时将输出文件移出当前目录或更名为中/英文形式，如果有重要信息被删除，就再扫一遍吧，也快得很，另BLEN如今可以良好的运行于MAC和Kali系统。
 
 ### 🍝 单个url扫描模式
 
@@ -74,7 +84,7 @@ git clone --depth 1 https://github.com/openx-org/BLEN.git BLEN
 
 > 新漏洞爆出来做全网验证  
 
-> 刷CNVD之类的漏洞平台的积分或排名  
+> 刷漏洞积分或排名  
 
 > 有RCE漏洞的POC的话，就可以刷肉鸡(见下方的[POC支持清单](#PocSupport))  
 
@@ -133,7 +143,6 @@ python3 BLEN.py -s all -f scan/1.txt
 
 可以动态的修改user和key，无需打开配置文件调整，下次使用时直接生效不必重新输入user和key    
 
-fofa search模式会将从api中获取到的结果进行去重并重新排序，因此虽然笔者设定逻辑为获取一万条url(``高级会员最大也就一万条``)但大部分情况下都不会是正好一万条结果，请放心食用  
 
 
 ### 🍤 Ceye配置
@@ -145,13 +154,10 @@ fofa search模式会将从api中获取到的结果进行去重并重新排序，
 ; 从ceye中拿到以下的数据，缺一不可
 dns = xxxxxx.ceye.io
 
-token = 52ab340912dfc6d334edbcba87234598
+token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 # 🌋 POC支持清单<div id="PocSupport"></div>
-
-
-BLEN目前仅具备verify也就是漏洞识别的能力，并不负责漏洞的后续利用，以下漏洞目前已支持检测   
 
 <br>
 
@@ -321,6 +327,12 @@ BLEN目前仅具备verify也就是漏洞识别的能力，并不负责漏洞的�
 
 # 🔨 错误提交
 
-如果您在使用BLEN的过程中遇到了一些笔者写代码时没有考虑到的问题或没有测试到的错误，欢迎提Issues  
+如果您在使用BLEN的过程中遇到了Bug，欢迎提Issues  
 
-提交BUG时，需要给到笔者触发错误的BLEN命令，测试文件，您的运行环境（包括但不限于操作系统、python版本等），报错的字符串形式➕ 报错截图  
+Issues格式：  
+```
+触发错误的BLEN命令
+测试文件
+您的运行环境（包括但不限于操作系统、python版本等）
+报错的字符串形式➕ 报错截图  
+```
