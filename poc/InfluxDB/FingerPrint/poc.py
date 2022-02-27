@@ -11,17 +11,17 @@ class POC(POCBase):
     _info = {
         "author" : "jijue",                      # POC作者
         "version" : "1",                    # POC版本，默认是1  
-        "CreateDate" : "2021-06-09",        # POC创建时间
-        "UpdateDate" : "2021-06-09",        # POC创建时间
+        "CreateDate" : "2022-01-01",        # POC创建时间
+        "UpdateDate" : "2022-01-01",        # POC创建时间
         "PocDesc" : """
         略  
         """,                                # POC描述，写更新描述，没有就不写
 
         "name" : "InfluxDB指纹识别",                        # 漏洞名称
-        "VulnID" : "Blen-2021-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
-        "AppName" : "",                     # 漏洞应用名称
+        "VulnID" : "oFx-2022-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
+        "AppName" : "InfluxDB",                     # 漏洞应用名称
         "AppVersion" : "",                  # 漏洞应用版本
-        "VulnDate" : "2021-06-09",                    # 漏洞公开的时间,不知道就写今天，格式：xxxx-xx-xx
+        "VulnDate" : "2022-01-01",                    # 漏洞公开的时间,不知道就写今天，格式：xxxx-xx-xx
         "VulnDesc" : """
             InfluxDB默认把Web界面运行在8083端口、把API接口运行在8086端口  
             响应包是会有两个头，分别是X-Influxdb-Version和X-Influxdb-Build
@@ -30,7 +30,7 @@ class POC(POCBase):
         """,                                # 漏洞简要描述
 
         "fofa-dork":"""
-        
+            app="influxdata-InfluxDB"
         """,                     # fofa搜索语句
         "example" : "",                     # 存在漏洞的演示url，写一个就可以了
         "exp_img" : "",                      # 先不管  
@@ -58,10 +58,10 @@ class POC(POCBase):
             检测逻辑，漏洞存在则修改vuln值为True，漏洞不存在则不动
             """
             req = requests.get(url,headers = headers , proxies = self.proxy ,timeout = self.timeout,verify = False)
-            if "自己调整":#req.status_code == 200 and :
-                vuln = [True,req.text]
+            if "X-Influxdb-Version" in req.headers or "X-Influxdb-Build" in req.headers:
+                vuln = [True,req.headers]
             else:
-                vuln = [False,req.text]
+                vuln = [False,req.headers]
         except Exception as e:
             raise e
         

