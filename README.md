@@ -3,7 +3,7 @@
 
 [![Python 3.x](https://img.shields.io/badge/python-3.x-yellow.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-GPLv3-brown.svg)](https://github.com/openx-org/BLEN/blob/main/LICENSE)
-[![POC_NUM](https://img.shields.io/badge/poc_num-143-orange.svg)](#PocSupport)
+[![POC_NUM](https://img.shields.io/badge/poc_num-157-orange.svg)](#PocSupport)
 ![GitHub Repo stars](https://img.shields.io/github/stars/openx-org/BLEN?color=gree)
 ![GitHub forks](https://img.shields.io/github/forks/openx-org/BLEN?color=blue)
 
@@ -169,7 +169,12 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 |360|360天擎数据库未授权访问|``poc/360/TianQing_Unauth_Acceess/poc.py``|
 |ACME|mini_httpd任意文件读取漏洞(CVE-2018-18778)|``poc/ACME/File_Read_mini_httpd_CVE_2018_18778/poc.py``|
 |Alibaba_Druid|Druid未授权访问|``poc/Alibaba_Druid/Unauth_Access/poc.py``|
+|Alibaba_Fastjson|Fastjson 反序列化远程代码执行漏洞（CVE-2017-18349）|``poc/Alibaba_FastJson/RCE_CVE_2017_18349/poc.py``|
 |Alibaba_Nacos|Nacos未授权访问|``poc/Alibaba_Nacos/Unauth_Access/poc.py``|
+|Apache ActiveMQ|Apache ActiveMQ 远程代码执行漏洞(CVE-2016-3088)|``poc/Apache_ActiveMQ/RCE_FileServer_CVE_2016_3088/poc.py``|
+||Apache ActiveMQ 弱口令 ➕ CVE-2015-5254|``poc/Apache_ActiveMQ/WeakPass/poc.py``|
+|Apache_ApiSix|Apache APISIX Dashboard 身份验证绕过漏洞（CVE-2021-45232）|``poc/Apache_ApiSix/DashBoard_Auth_Bypass_CVE_2021_45232/poc.py``|
+||Apache APISIX 默认密钥漏洞（CVE-2020-13945）|``poc/Apache_ApiSix/Default_Key_CVE_2020_13945/poc.py``|
 |Apache CouchDB|Apache Couchdb 远程权限提升(CVE-2017-12635)|``poc/Apache_CouchDB/Priv_Escalation_CVE-2017_12635/poc.py``|
 |Apache Druid|Apache Druid任意文件读取复现(CVE-2021-36749)|``poc/Apache_Druid/File_Read_CVE_2021_36749/poc.py``|
 |Apache Flink|Apache Flink目录穿透(CVE-2020-17519)|``poc/Apache_Flink/Dir_Traversal_CVE_2020_17519/poc.py``|
@@ -220,9 +225,12 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 |宏电|宏电 H8922 后台任意文件读取漏洞|``poc/Hongdian_宏电/Backstage_File_Read_CVE_2021_28152/poc.py``|
 |好视通|好视通视频会议平台 任意文件下载|``poc/HST_好视通/File_Download/poc.py``|
 |华为|Huawei HG659 lib 任意文件读取漏洞|``poc/Huawei/File_Read_HG659_lib/poc.py``|
+||华为路由器敏感信息泄露 DG8045 Router 1.0|``poc/Huawei/Info_Disclosure_DG8045/poc.py``|
 |汇文|汇文OPAC敏感信息泄露|``poc/HuiWen_汇文/Info_Disclosure/poc.py``|
 ||汇文OPAC弱口令|``poc/HuiWen_汇文/Weak_Pass/poc.py``|
 |蜂网互联|蜂网互联 企业级路由器v4.31 密码泄露漏洞|``poc/IFW8_蜂网互联/UPInfo_DisClosure_CVE_2019_16313/poc.py``|
+|InfluxDB|InfluxDB指纹识别|``poc/InfluxDB/FingerPrint/poc.py``|
+||InfluxDB 未授权访问|``poc/InfluxDB/UnAuth_Access/poc.py``|
 |Intelbras|Intelbras Wireless 未授权与密码泄露|``poc/Intelbras/UPInfo_Disclosure_CVE_2021_3017/poc.py``|
 |Jboss|Jboss未授权访问|``poc/Jboss/Unauth_Access/poc.py``|
 |Jellyfin|Jellyfin任意文件读取|``poc/jellyfin/File_Read_CVE_2021_21402/poc.py``|
@@ -252,10 +260,12 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 |中科网威|中科网威 下一代防火墙控制系统 账号密码泄露漏洞|``poc/NetPower_中科网威/UPInfo_DisClosure_Firewall/poc.py``|
 |Node.js|Node.js目录穿越漏洞|``poc/Node.js/Dir_Traversal_CVE_2017_14849/poc.py``|
 |新软科技|极通EWEBS应用虚拟化系统任意文件读取|``poc/NSoft_新软/FileRead_EWEBS/poc.py``|
+|OKI|OKI MC573未授权访问|``poc/OKI/UnAuth_MC573/poc.py``|
 |梨子项目管理系统|梨子项目管理系统 信息泄露漏洞|``poc/PearProject_梨子项目管理系统/Conf_Info_Disclosure_env/poc.py``|
 |PHP|php v8.1开发版后门检测|``poc/php/Backdoor_v8dev/poc.py``|
 |PHPStudy|PHPStudy 后门检测|``poc/PHPStudy/Back_Door/poc.py``|
 |PHPUnit|PHPUnit eval-stdin.php 远程命令执行漏洞|``poc/PHPUnit/RCE_eval_stdin/poc.py``|
+|QZSec_齐治|齐治堡垒机 任意用户登录漏洞|``poc/QZSec_齐治/AnyUser_Login_Fortress_Machine/poc.py``|
 |Redis|Redis未授权访问|``poc/Redis/Unauth_Access/poc.py``|
 |锐捷|锐捷EG网关 userAuth.php存在任意文件读取漏洞|``poc/Ruijie_锐捷/File_Read_EG_userAuth/poc.py``|
 ||锐捷NBR 1300G 路由器 越权CLI命令执行漏洞|``poc/Ruijie_锐捷/RCE_NBR_1300G/poc.py``|
@@ -266,6 +276,7 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 |若依后台管理系统|若依后台管理系统 弱口令|``poc/RuoYi_若依/Weak_Pass/poc.py``|
 |Samsung|三星路由器本地文件包含|``poc/Samsung/Lfi_Samsung_Wlan_AP/poc.py``|
 ||三星 WLAN AP WEA453e路由器 远程命令执行漏洞|``poc/Samsung/RCE_Samsung_WLANAP_WEA453e/poc.py``|
+|Sangfor 深信服|深信服EDR终端检测响应平台RCE漏洞(CNVD-2020-46552)|``poc/SANGFOR_深信服/RCE_2020_EDR/poc.py``|
 |Sapido|Sapido BRC70n路由器远程代码执行漏洞|``poc/Sapido/RCE_BRC70n_Router/poc.py``|
 |致远OA|致远OA webmail.do 任意文件下载 (CNVD-2020-62422)|``poc/SeeYon_致远/File_Download/poc.py``|
 ||致远OA ajax.do 任意文件上传|``poc/SeeYon_致远/File_Upload_ajax_do/poc.py``|
@@ -282,10 +293,12 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ||ThinkPHP5 5.0.23 远程代码执行漏洞|``poc/Thinkphp/RCE_5023/poc.py``|
 |通达OA|通达OA 计算机名探测插件|``poc/Tongda_通达OA/Computer_Name_Plugin/poc.py``|
 ||通达OA 版本探测插件|``poc/Tongda_通达OA/Version_Info_Plugin/poc.py``|
+||通达OA2017 前台任意用户登录漏洞|``poc/Tongda_通达OA/AnyUser_Login_Version2017/poc.py``|
 |同为股份|TVT数码科技 NVMS-1000 路径遍历漏洞|``poc/TVT_同为股份/Dir_Traversal_NVMS_1000/poc.py``|
 |艾泰科技|艾泰网络管理系统弱口令|``poc/UTT_艾泰科技/WeakPass_Net_Manager_System/poc.py``|
 |启明星辰|天玥运维网关/网御网络审计 Sql注入漏洞|``poc/Venustech_启明星辰/SQLi_Reportguide/poc.py``|
 |VMware|Vmware vCenter 任意文件读取|``poc/VMware/File_read_vCenter/poc.py``|
+||VMware vRealize Operations Manager SSRF漏洞 CVE-2021-21975|``poc/VMware/SSRF_vRealize_CVE_2021_21975/poc.py``|
 |VoIPmonitor|VoIPmonitor 未授权远程代码执行(CVE-2021-30461)|``poc/VoIPmonitor/RCE_CVE_2021_30461/poc.py``|
 |泛微 OA|泛微云桥 e-Bridge 任意文件读取漏洞|``poc/Weaver_泛微OA/File_Read_E_Bridge/poc.py``|
 ||泛微OA E-Office V9文件上传漏洞(CNVD-2021-49104)|``poc/Weaver_泛微OA/File_Upload_E_Office_V9_CNVD_2021_49104/poc.py``|
@@ -306,6 +319,7 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 |用友NC|用友NC6.5 BeanShell RCE|``poc/Yonyou_用友NC/RCE_BeanShell_CNVD_2021_30167/poc.py``|
 ||用友ERP-NC 目录遍历漏洞|``poc/Yonyou_用友NC/Dir_List_ERP/poc.py``|
 ||用友GRP-U8行政事业财务管理软件 SQL注入 CNNVD-201610-923|``poc/Yonyou_用友NC/Sqli_CNNVD_201610_923/poc.py``|
+|Zabbix|Zabbix弱口令|``poc/Zabbix/Weak_Pass/poc.py``|
 |禅道|禅道8.2-9.2.1注入GetShell|``poc/Zentao_禅道/Getshell_test/poc.py``|
 |ZeroShell防火墙|ZeroShell 3.9.0 远程命令执行漏洞|``poc/ZeroShell/RCE_kerbynet/poc.py``|
 |Zyxel|Zyxel NBG2105身份验证绕过|``poc/Zyxel/Login_Pass_NBG2105/poc.py``|

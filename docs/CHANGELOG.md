@@ -725,6 +725,25 @@
 * ``Vmware vCenter 任意文件读取``
 * ``VoIPmonitor 未授权远程代码执行(CVE-2021-30461)``
 
+
+## version 2.25.1
+------------------
+> 新增POC：
+* ``Fastjson 反序列化远程代码执行漏洞（CVE-2017-18349）``
+* ``Apache ActiveMQ 远程代码执行漏洞(CVE-2016-3088)``
+* ``Apache ActiveMQ 弱口令 ➕ CVE-2015-5254``
+* ``Apache APISIX Dashboard 身份验证绕过漏洞（CVE-2021-45232）``
+* ``Apache APISIX 默认密钥漏洞（CVE-2020-13945）``
+* ``InfluxDB指纹识别``
+* ``InfluxDB 未授权访问``
+* ``OKI MC573未授权访问``
+* ``深信服EDR终端检测响应平台RCE漏洞(CNVD-2020-46552)``
+* ``通达OA2017 前台任意用户登录漏洞``
+* ``VMware vRealize Operations Manager SSRF漏洞 CVE-2021-21975``
+* ``Zabbix弱口令``
+* ``华为路由器敏感信息泄露 DG8045 Router 1.0``
+* ``齐治堡垒机 任意用户登录漏洞``
+
 ```
 ===============
 ｜以上为当前版本｜
