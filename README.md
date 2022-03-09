@@ -3,13 +3,13 @@
 
 [![Python 3.x](https://img.shields.io/badge/python-3.x-yellow.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-GPLv3-brown.svg)](https://github.com/openx-org/BLEN/blob/main/LICENSE)
-[![POC_NUM](https://img.shields.io/badge/poc_num-151-orange.svg)](#PocSupport)
+[![POC_NUM](https://img.shields.io/badge/poc_num-152-orange.svg)](#PocSupport)
 ![GitHub Repo stars](https://img.shields.io/github/stars/openx-org/BLEN?color=gree)
 ![GitHub forks](https://img.shields.io/github/forks/openx-org/BLEN?color=blue)
 
 ## 🦌 简介
 
-1、POC数量、经过OpenxLab实验室小伙伴们的不懈努力现已有151个POC；  
+1、POC数量、经过OpenxLab实验室小伙伴们的不懈努力现已有152个POC；  
 
 2、使用python编写、跨平台、并发能力强、扫描速度非常快；  
 
@@ -189,13 +189,13 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ||svn信息泄露|``poc/common/Svn_Info_Disclosure/poc.py``|
 ||URL存活检测|``poc/common/Url_Alive/poc.py``|
 ||Apache列目录|``poc/common/Apache_Dir_List/poc.py``|
-|一指通-E7人力资源系统弱口令漏洞|``poc\一指通\XiaMen_Yizhitong_Weak_pass\poc.py``|
-|中控智能监控未授权访问漏洞|``poc\中硅技术\ZhongGuijishu_Unauth_Access\poc.py``|
-|Apache_Kudu 未授权访问漏洞|``poc\Apache_Kudu\Apache_Kudu_UnAuth_Access\poc.py``|
+|一指通-E7人力资源系统弱口令漏洞|``poc/一指通/XiaMen_Yizhitong_Weak_pass/poc.py``|
+|中控智能监控未授权访问漏洞|``poc/中硅技术/ZhongGuijishu_Unauth_Access/poc.py``|
+|Apache_Kudu 未授权访问漏洞|``poc/Apache_Kudu/Apache_Kudu_UnAuth_Access/poc.py``|
 |Apache ActiveMQ|Apache ActiveMQ 远程代码执行漏洞(CVE-2016-3088)|``poc/Apache_ActiveMQ/RCE_FileServer_CVE_2016_3088/poc.py``|
 ||Apache ActiveMQ 弱口令 ➕ CVE-2015-5254|``poc/Apache_ActiveMQ/WeakPass/poc.py``|
 ||ActiveMQ物理路径泄漏漏洞|``poc/Apache_ActiveMQ/Physical_Path_Disclosure/poc.py``|
-|Apache ActiveUC 信息泄露漏洞|``poc\Apache_ActiveMQ\Active_UC_Info_Disclosure\poc.py``|
+|Apache ActiveUC 信息泄露漏洞|``poc/Apache_ActiveMQ/Active_UC_Info_Disclosure/poc.py``|
 |Confluence|Confluence Server Webwork OGNL注入 PreAuth-RCE(CVE-2021-26084)|``poc/Confluence/OGNL_Injection_CVE_2021_26084/poc.py``|
 |Coremail|Coremail 配置信息泄露漏洞|``poc/Coremail/Conf_Info_Disclosure/poc.py``|
 |赤兔CMS|赤兔CMS banner识别插件|``poc/CtCMS_赤兔CMS/Get_Banner/poc.py``|
@@ -227,6 +227,7 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 |宏电|宏电 H8922 后台任意文件读取漏洞|``poc/Hongdian_宏电/Backstage_File_Read_CVE_2021_28152/poc.py``|
 |好视通|好视通视频会议平台 任意文件下载|``poc/HST_好视通/File_Download/poc.py``|
 |华为|Huawei HG659 lib 任意文件读取漏洞|``poc/Huawei/File_Read_HG659_lib/poc.py``|
+|Wayos AC|集中管理系统默认弱口令|``poc/WayosAC/poc.py``|
 |汇文|汇文OPAC敏感信息泄露|``poc/HuiWen_汇文/Info_Disclosure/poc.py``|
 ||汇文OPAC弱口令|``poc/HuiWen_汇文/Weak_Pass/poc.py``|
 |蜂网互联|蜂网互联 企业级路由器v4.31 密码泄露漏洞|``poc/IFW8_蜂网互联/UPInfo_DisClosure_CVE_2019_16313/poc.py``|
@@ -289,7 +290,7 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ||ThinkPHP5 5.0.23 远程代码执行漏洞|``poc/Thinkphp/RCE_5023/poc.py``|
 |通达OA|通达OA 计算机名探测插件|``poc/Tongda_通达OA/Computer_Name_Plugin/poc.py``|
 ||通达OA 版本探测插件|``poc/Tongda_通达OA/Version_Info_Plugin/poc.py``|
-||通达OA 前台sql注入|``poc\Tongda_通达OA\Sql_inj_TongDa/poc.py``|
+||通达OA 前台sql注入|``poc/Tongda_通达OA/Sql_inj_TongDa/poc.py``|
 |同为股份|TVT数码科技 NVMS-1000 路径遍历漏洞|``poc/TVT_同为股份/Dir_Traversal_NVMS_1000/poc.py``|
 |艾泰科技|艾泰网络管理系统弱口令|``poc/UTT_艾泰科技/WeakPass_Net_Manager_System/poc.py``|
 |启明星辰|天玥运维网关/网御网络审计 Sql注入漏洞|``poc/Venustech_启明星辰/SQLi_Reportguide/poc.py``|
