@@ -189,13 +189,13 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ||svn信息泄露|``poc/common/Svn_Info_Disclosure/poc.py``|
 ||URL存活检测|``poc/common/Url_Alive/poc.py``|
 ||Apache列目录|``poc/common/Apache_Dir_List/poc.py``|
-|一指通-E7人力资源系统弱口令漏洞|``poc/一指通/XiaMen_Yizhitong_Weak_pass/poc.py``|
-|中控智能监控未授权访问漏洞|``poc/中硅技术/ZhongGuijishu_Unauth_Access/poc.py``|
-|Apache_Kudu 未授权访问漏洞|``poc/Apache_Kudu/Apache_Kudu_UnAuth_Access/poc.py``|
+|一指通-E7人力资源|系统弱口令漏洞|``poc/一指通/XiaMen_Yizhitong_Weak_pass/poc.py``|
+|中控智能监控|未授权访问漏洞|``poc/中硅技术/ZhongGuijishu_Unauth_Access/poc.py``|
+|Apache_Kudu|未授权访问漏洞|``poc/Apache_Kudu/Apache_Kudu_UnAuth_Access/poc.py``|
 |Apache ActiveMQ|Apache ActiveMQ 远程代码执行漏洞(CVE-2016-3088)|``poc/Apache_ActiveMQ/RCE_FileServer_CVE_2016_3088/poc.py``|
 ||Apache ActiveMQ 弱口令 ➕ CVE-2015-5254|``poc/Apache_ActiveMQ/WeakPass/poc.py``|
 ||ActiveMQ物理路径泄漏漏洞|``poc/Apache_ActiveMQ/Physical_Path_Disclosure/poc.py``|
-|Apache ActiveUC 信息泄露漏洞|``poc/Apache_ActiveMQ/Active_UC_Info_Disclosure/poc.py``|
+|ApacheActiveUC|信息泄露漏洞|``poc/Apache_ActiveMQ/Active_UC_Info_Disclosure/poc.py``|
 |Confluence|Confluence Server Webwork OGNL注入 PreAuth-RCE(CVE-2021-26084)|``poc/Confluence/OGNL_Injection_CVE_2021_26084/poc.py``|
 |Coremail|Coremail 配置信息泄露漏洞|``poc/Coremail/Conf_Info_Disclosure/poc.py``|
 |赤兔CMS|赤兔CMS banner识别插件|``poc/CtCMS_赤兔CMS/Get_Banner/poc.py``|
