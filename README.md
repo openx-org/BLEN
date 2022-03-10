@@ -3,13 +3,13 @@
 
 [![Python 3.x](https://img.shields.io/badge/python-3.x-yellow.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-GPLv3-brown.svg)](https://github.com/openx-org/BLEN/blob/main/LICENSE)
-[![POC_NUM](https://img.shields.io/badge/poc_num-156-orange.svg)](#PocSupport)
+[![POC_NUM](https://img.shields.io/badge/poc_num-157-orange.svg)](#PocSupport)
 ![GitHub Repo stars](https://img.shields.io/github/stars/openx-org/BLEN?color=gree)
 ![GitHub forks](https://img.shields.io/github/forks/openx-org/BLEN?color=blue)
 
 ## 🦌 简介
 
-1、POC数量、经过OpenxLab实验室小伙伴们的不懈努力现已有156个POC；  
+1、POC数量、经过OpenxLab实验室小伙伴们的不懈努力现已有157个POC；  
 
 2、使用python编写、跨平台、并发能力强、扫描速度非常快；  
 
@@ -164,7 +164,7 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 <details>
 <summary>支持的漏洞列表 [点击展开] </summary>  
 
-|序号|应用|漏洞名称|POC路径|
+|应用|漏洞名称|POC路径|
 |-|-|-|
 |360|360天擎数据库未授权访问|``poc/360/TianQing_Unauth_Acceess/poc.py``|
 |ACME|mini_httpd任意文件读取漏洞(CVE-2018-18778)|``poc/ACME/File_Read_mini_httpd_CVE_2018_18778/poc.py``|
