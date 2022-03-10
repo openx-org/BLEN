@@ -9,7 +9,7 @@ urllib3.disable_warnings()
 
 
 class POC(POCBase):
-
+ 
 
     _info = {
         "author" : "jijue",                      # POC作者
