@@ -3,13 +3,13 @@
 
 [![Python 3.x](https://img.shields.io/badge/python-3.x-yellow.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-GPLv3-brown.svg)](https://github.com/openx-org/BLEN/blob/main/LICENSE)
-[![POC_NUM](https://img.shields.io/badge/poc_num-152-orange.svg)](#PocSupport)
+[![POC_NUM](https://img.shields.io/badge/poc_num-153-orange.svg)](#PocSupport)
 ![GitHub Repo stars](https://img.shields.io/github/stars/openx-org/BLEN?color=gree)
 ![GitHub forks](https://img.shields.io/github/forks/openx-org/BLEN?color=blue)
 
 ## 🦌 简介
 
-1、POC数量、经过OpenxLab实验室小伙伴们的不懈努力现已有152个POC；  
+1、POC数量、经过OpenxLab实验室小伙伴们的不懈努力现已有153个POC；  
 
 2、使用python编写、跨平台、并发能力强、扫描速度非常快；  
 
@@ -184,6 +184,7 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 |C-Lodop|C-Lodop 云打印机系统平台任意文件读取漏洞|``poc/C_Lodop/File_Read/poc.py``|
 |中国电信|电信天翼网关F460 web_shell_cmd.gch 远程命令执行漏洞|``poc/China_TeleCOM_中国电信/RCE_F460_GateWay/poc.py``|
 ||大唐电信AC集中管理平台默认口令|``poc/China_TeleCOM_中国电信/Weak_Pass_DaTang_AC_Manager/poc.py``|
+||MAC1200R电信定制版默认弱口令|``poc/China_TeleCOM_中国电信/MAC1200R_Weak_Pass/poc.py``|
 |中国移动|中国移动 禹路由 ExportSettings.sh 敏感信息泄露漏洞|``poc/China_Mobile_中国移动/Info_Disclosure_Yu_routing_ExportSettings/poc.py``|
 |common(通用)|git信息泄露|``poc/common/Git_Info_Disclosure/poc.py``|
 ||svn信息泄露|``poc/common/Svn_Info_Disclosure/poc.py``|
