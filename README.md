@@ -3,13 +3,13 @@
 
 [![Python 3.x](https://img.shields.io/badge/python-3.x-yellow.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-GPLv3-brown.svg)](https://github.com/openx-org/BLEN/blob/main/LICENSE)
-[![POC_NUM](https://img.shields.io/badge/poc_num-156-orange.svg)](#PocSupport)
+[![POC_NUM](https://img.shields.io/badge/poc_num-157-orange.svg)](#PocSupport)
 ![GitHub Repo stars](https://img.shields.io/github/stars/openx-org/BLEN?color=gree)
 ![GitHub forks](https://img.shields.io/github/forks/openx-org/BLEN?color=blue)
 
 ## 🦌 简介
 
-1、POC数量、经过OpenxLab实验室小伙伴们的不懈努力现已有156个POC；  
+1、POC数量、经过OpenxLab实验室小伙伴们的不懈努力现已有157个POC；  
 
 2、使用python编写、跨平台、并发能力强、扫描速度非常快；  
 
@@ -201,6 +201,7 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 |Apache_ApiSix|Apache APISIX Dashboard 身份验证绕过漏洞（CVE-2021-45232）|``poc/Apache_ApiSix/DashBoard_Auth_Bypass_CVE_2021_45232/poc.py``|
 ||Apache APISIX 默认密钥漏洞（CVE-2020-13945）|``poc/Apache_ApiSix/Default_Key_CVE_2020_13945/poc.py``|
 |Coremail|Coremail 配置信息泄露漏洞|``poc/Coremail/Conf_Info_Disclosure/poc.py``|
+|QZSec_齐治|齐治堡垒机 任意用户登录漏洞|``poc/QZSec_齐治/AnyUser_Login_Fortress_Machine/poc.py``|
 |赤兔CMS|赤兔CMS banner识别插件|``poc/CtCMS_赤兔CMS/Get_Banner/poc.py``|
 |D-Link|D-Link ShareCenter DNS-320 system_mgr.cgi 远程命令执行漏洞|``poc/D_Link/RCE_ShareCenter_system_mgr_cgi/poc.py``|
 ||D-Link Dir-645 getcfg.php 账号密码泄露漏洞(CVE-2019-17506)|``poc/D_Link/UPInfo_Disclosure_getcfg_php/poc.py``|
@@ -294,6 +295,7 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 |通达OA|通达OA 计算机名探测插件|``poc/Tongda_通达OA/Computer_Name_Plugin/poc.py``|
 ||通达OA 版本探测插件|``poc/Tongda_通达OA/Version_Info_Plugin/poc.py``|
 ||通达OA 前台sql注入|``poc/Tongda_通达OA/Sql_inj_TongDa/poc.py``|
+||通达OA2017 前台任意用户登录漏洞|``poc/Tongda_通达OA/AnyUser_Login_Version2017/poc.py``|
 |同为股份|TVT数码科技 NVMS-1000 路径遍历漏洞|``poc/TVT_同为股份/Dir_Traversal_NVMS_1000/poc.py``|
 |艾泰科技|艾泰网络管理系统弱口令|``poc/UTT_艾泰科技/WeakPass_Net_Manager_System/poc.py``|
 |启明星辰|天玥运维网关/网御网络审计 Sql注入漏洞|``poc/Venustech_启明星辰/SQLi_Reportguide/poc.py``|
