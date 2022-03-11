@@ -196,7 +196,7 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 |Apache ActiveMQ|Apache ActiveMQ 远程代码执行漏洞(CVE-2016-3088)|``poc/Apache_ActiveMQ/RCE_FileServer_CVE_2016_3088/poc.py``|
 ||Apache ActiveMQ 弱口令 ➕ CVE-2015-5254|``poc/Apache_ActiveMQ/WeakPass/poc.py``|
 ||ActiveMQ物理路径泄漏漏洞|``poc/Apache_ActiveMQ/Physical_Path_Disclosure/poc.py``|
-|ApacheActiveUC|信息泄露漏洞|``poc/Apache_ActiveMQ/Active_UC_Info_Disclosure/poc.py``|
+|ApacheActiveUC|信息泄露漏洞|``poc/Apache_ActiveUC/Active_UC_Info_Disclosure/poc.py``|
 |Confluence|Confluence Server Webwork OGNL注入 PreAuth-RCE(CVE-2021-26084)|``poc/Confluence/OGNL_Injection_CVE_2021_26084/poc.py``|
 |Apache_ApiSix|Apache APISIX Dashboard 身份验证绕过漏洞（CVE-2021-45232）|``poc/Apache_ApiSix/DashBoard_Auth_Bypass_CVE_2021_45232/poc.py``|
 ||Apache APISIX 默认密钥漏洞（CVE-2020-13945）|``poc/Apache_ApiSix/Default_Key_CVE_2020_13945/poc.py``|
