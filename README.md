@@ -3,7 +3,7 @@
 
 [![Python 3.x](https://img.shields.io/badge/python-3.x-yellow.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-GPLv3-brown.svg)](https://github.com/openx-org/BLEN/blob/main/LICENSE)
-[![POC_NUM](https://img.shields.io/badge/poc_num-157-orange.svg)](#PocSupport)
+[![POC_NUM](https://img.shields.io/badge/poc_num-162-orange.svg)](#PocSupport)
 ![GitHub Repo stars](https://img.shields.io/github/stars/openx-org/BLEN?color=gree)
 ![GitHub forks](https://img.shields.io/github/forks/openx-org/BLEN?color=blue)
 
@@ -179,6 +179,9 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 |Apache Solr|Apache Solr Velocity 注入远程命令执行漏洞 (CVE-2019-17558)|``poc/Apache_Solr/CVE_2019_17558/poc.py``|
 ||Apache Solr 任意文件读取漏洞|``poc/Apache_Solr/File_Read/poc.py``|
 ||Apache Solr 远程命令执行 Log4j|``poc/Apache_Solr/RCE_Log4j_CVE_2021_44228/poc.py``|
+|Alibaba_FastJson|Alibaba_FastJsonRCE_CVE_2017_18349|``poc/Alibaba_FastJsonRCE_CVE_2017_18349/poc.py``|
+|MicroSoft|MicroSoftRCE_CVE_2022_2190|``poc\MicroSoftRCE_CVE_2022_21907\poc.py``|
+|Sangfor 深信服|深信服EDR终端检测响应平台RCE漏洞(CNVD-2020-46552)|``poc/SANGFOR_深信服/RCE_2020_EDR/poc.py``|
 |碧海威 L7|碧海威 L7 弱口令漏洞|``poc/Bithighway_碧海威/Weak_Pass_L7/poc.py``|
 |BSPHP|BSPHP 未授权访问 信息泄露漏洞|``poc/BSPHP/Info_Disclosure/poc.py``|
 |C-Lodop|C-Lodop 云打印机系统平台任意文件读取漏洞|``poc/C_Lodop/File_Read/poc.py``|
@@ -317,6 +320,8 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ||RCE_CVE-2018-3191|``poc/Weblogic/RCE_CVE_2018_3191/poc.py``|
 ||Weblogic SSRF (CVE-2014-4210)|``poc/Weblogic/SSRF_CVE_2014_4210/poc.py``|
 ||Weblogic 管理控制台未授权远程命令执行漏洞（CVE-2020-14882，CVE-2020-14883）|``poc/Weblogic/UnAuth_RCE_CVE_2020_14882/poc.py``|
+||Weblogic XMLDecoder反序列化漏洞（CVE-2017-3506）|``poc/Weblogic/XMLDecoder_CVE_2017_3506/poc.py``|
+|Flask_Ssti|Flask_Ssti_CVE-2017-12636|``poc\Flask_Ssti_CVE-2017-12636\poc.py``|
 |用友NC|用友NC6.5 BeanShell RCE|``poc/Yonyou_用友NC/RCE_BeanShell_CNVD_2021_30167/poc.py``|
 ||用友ERP-NC 目录遍历漏洞|``poc/Yonyou_用友NC/Dir_List_ERP/poc.py``|
 ||用友GRP-U8行政事业财务管理软件 SQL注入 CNNVD-201610-923|``poc/Yonyou_用友NC/Sqli_CNNVD_201610_923/poc.py``|
