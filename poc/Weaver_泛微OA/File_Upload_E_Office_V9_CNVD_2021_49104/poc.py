@@ -18,7 +18,7 @@ class POC(POCBase):
         """,                                # POC描述，写更新描述，没有就不写
 
         "name" : "泛微OA E-Office V9文件上传漏洞(CNVD-2021-49104)",                        # 漏洞名称
-        "VulnID" : "Blen-2021-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
+        "VulnID" : "oFx-2021-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
         "AppName" : "泛微OA E-Office",                     # 漏洞应用名称
         "AppVersion" : "E-Office V9",                  # 漏洞应用版本
         "VulnDate" : "2021-06-09",                    # 漏洞公开的时间,不知道就写今天，格式：xxxx-xx-xx

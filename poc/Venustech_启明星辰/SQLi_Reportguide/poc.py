@@ -19,7 +19,7 @@ class POC(POCBase):
         """,                                # POC描述，写更新描述，没有就不写
 
         "name" : "天玥运维网关/网御网络审计 Sql注入漏洞",                        # 漏洞名称
-        "VulnID" : "Blen-2021-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
+        "VulnID" : "oFx-2021-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
         "AppName" : "",                     # 漏洞应用名称
         "AppVersion" : """
             天玥运维安全网关V6.0

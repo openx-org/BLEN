@@ -33,7 +33,7 @@ class POC(POCBase):
         """,                                # 漏洞简要描述
 
         "fofa-dork":"""
-        title="BIG-IP®"
+            title="BIG-IP®"
         """,                     # fofa搜索语句
         "example" : "https://54.206.65.62:443",                     # 存在漏洞的演示url，写一个就可以了
         "exp_img" : "",                      # 先不管  

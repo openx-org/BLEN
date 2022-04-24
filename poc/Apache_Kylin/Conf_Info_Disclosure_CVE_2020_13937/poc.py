@@ -17,7 +17,7 @@ class POC(POCBase):
         略  
         """,                                # POC描述，写更新描述，没有就不写
 
-        "name" : "Apache Kylin 未授权配置泄露 CVE-2020-13937",                        # 漏洞名称
+        "name" : "Apache Kylin 未授权配置泄露(CVE-2020-13937)",                        # 漏洞名称
         "VulnID" : "CVE-2020-13937",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
         "AppName" : "Apache Kylin",                     # 漏洞应用名称
         "AppVersion" : """
@@ -59,7 +59,7 @@ class POC(POCBase):
             检测逻辑，漏洞存在则修改vuln值为True，漏洞不存在则不动
             """
             req = requests.get(url,headers = headers , proxies = self.proxy ,timeout = self.timeout,verify = False)
-            if "config" in req.text:#req.status_code == 200 and :
+            if '{"config":"' in req.text:#req.status_code == 200 and :
                 vuln = [True,req.text]
             else:
                 vuln = [False,req.text]

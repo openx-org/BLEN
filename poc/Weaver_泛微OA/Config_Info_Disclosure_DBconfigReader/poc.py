@@ -4,7 +4,6 @@ from lib.core.common import url_handle,get_random_ua
 from lib.core.poc import POCBase
 # ...
 import urllib3
-import pyDes
 urllib3.disable_warnings()
 
 class POC(POCBase):
@@ -22,7 +21,7 @@ class POC(POCBase):
         """,                                # POC描述，写更新描述，没有就不写
 
         "name" : "泛微 e-cology OA 数据库配置信息泄露漏洞",                        # 漏洞名称
-        "VulnID" : "Blen-2021-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
+        "VulnID" : "oFx-2021-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
         "AppName" : "泛微 e-cology",                     # 漏洞应用名称
         "AppVersion" : "目前已知为8.100.0531，不排除其他版本，包括不限于EC7.0、EC8.0",                  # 漏洞应用版本
         "VulnDate" : "2021-06-09",                    # 漏洞公开的时间,不知道就写今天，格式：xxxx-xx-xx

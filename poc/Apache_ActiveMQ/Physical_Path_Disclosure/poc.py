@@ -9,7 +9,7 @@ urllib3.disable_warnings()
 class POC(POCBase):
 
     _info = {
-        "author" : "jijue&&hansi",                      # POC作者
+        "author" : "jijue",                      # POC作者
         "version" : "1",                    # POC版本，默认是1  
         "CreateDate" : "2022-01-01",        # POC创建时间
         "UpdateDate" : "2022-01-01",        # POC创建时间
@@ -36,7 +36,9 @@ class POC(POCBase):
     def _verify(self):
         """
         返回vuln
+
         存在漏洞：vuln = [True,html_source] # html_source就是页面源码  
+
         不存在漏洞：vuln = [False,""]
         """
         vuln = [False,""]

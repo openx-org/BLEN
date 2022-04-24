@@ -21,7 +21,7 @@ class POC(POCBase):
         """,                                # POC描述，写更新描述，没有就不写
 
         "name" : "禅道8.2-9.2.1注入GetShell",                        # 漏洞名称
-        "VulnID" : "Blen-2021-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
+        "VulnID" : "oFx-2021-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
         "AppName" : "禅道",                     # 漏洞应用名称
         "AppVersion" : "禅道8.9-9.2.1",                  # 漏洞应用版本
         "VulnDate" : "2021-06-09",                    # 漏洞公开的时间,不知道就写今天，格式：xxxx-xx-xx

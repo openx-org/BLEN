@@ -39,7 +39,9 @@ class POC(POCBase):
     def _verify(self):
         """
         返回vuln
+
         存在漏洞：vuln = [True,html_source] # html_source就是页面源码  
+
         不存在漏洞：vuln = [False,""]
         """
         vuln = [False,""]

