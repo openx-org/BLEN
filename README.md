@@ -1,11 +1,11 @@
-#  🖥 奔雷BLEN
+#  🖥 奔雷blen
 
 
 [![Python 3.x](https://img.shields.io/badge/python-3.x-yellow.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/license-GPLv3-brown.svg)](https://github.com/openx-org/BLEN/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-GPLv3-brown.svg)](https://github.com/openx-org/blen/blob/main/LICENSE)
 [![POC_NUM](https://img.shields.io/badge/poc_num-162-orange.svg)](#PocSupport)
-![GitHub Repo stars](https://img.shields.io/github/stars/openx-org/BLEN?color=gree)
-![GitHub forks](https://img.shields.io/github/forks/openx-org/BLEN?color=blue)
+![GitHub Repo stars](https://img.shields.io/github/stars/openx-org/blen?color=gree)
+![GitHub forks](https://img.shields.io/github/forks/openx-org/blen?color=blue)
 
 ## 🦌 简介
 
@@ -13,7 +13,7 @@
 
 2、使用python编写、跨平台、并发能力强、扫描速度非常快；  
 
-3、POC模板结构简单，脚本化编程、提供了专门面对开发者的小工具箱，适合用户自定义POC，快速拓展BLEN的检测能力；  
+3、POC模板结构简单，脚本化编程、提供了专门面对开发者的小工具箱，适合用户自定义POC，快速拓展blen的检测能力；  
 
 4、所有POC都是以不对目标产生任何负面影响的宗旨编写的，既能发现缺陷也不会给目标业务造成大的负面影响，能灵活应用于企业与个人之间的安全需求；  
 
@@ -34,11 +34,11 @@
 
 ## 🇨🇳 法律免责声明
 ```
-未经事先双方同意，使用BLEN攻击目标是非法的。
-BLEN仅用于安全测试与研究目的
+未经事先双方同意，使用blen攻击目标是非法的。
+blen仅用于安全测试与研究目的
 
-Usage of BLEN for attacking targets without prior mutual consent is illegal.
-BLEN is for security testing purposes only
+Usage of blen for attacking targets without prior mutual consent is illegal.
+blen is for security testing purposes only
 ```
 
 ## 📄 Licenses
@@ -61,11 +61,11 @@ BLEN is for security testing purposes only
 ###  🍢 部署
 
 ```
-git clone --depth 1 https://github.com/openx-org/BLEN.git BLEN
+git clone --depth 1 https://github.com/openx-org/blen.git blen
 ```
 
 ### 🍜 用前提醒
-使用前提醒，BLEN默认每次运行都会有报告和log输出，分别在output与log文件夹下，出于缓解存储压力的考虑，设定的规则为每次运行时都会删除12小时以前的输出文件，如果该输出文件对使用者有剩余价值，请在运行结束后及时将输出文件移出当前目录或更名为中/英文形式，如果有重要信息被删除，就再扫一遍吧，也快得很，另BLEN如今可以良好的运行于MAC和Kali系统。
+使用前提醒，blen默认每次运行都会有报告和log输出，分别在output与log文件夹下，出于缓解存储压力的考虑，设定的规则为每次运行时都会删除12小时以前的输出文件，如果该输出文件对使用者有剩余价值，请在运行结束后及时将输出文件移出当前目录或更名为中/英文形式，如果有重要信息被删除，就再扫一遍吧，也快得很，另blen如今可以良好的运行于MAC和Kali系统。
 
 ### 🍝 单个url扫描模式
 
@@ -74,9 +74,10 @@ git clone --depth 1 https://github.com/openx-org/BLEN.git BLEN
 
 使用方法  
 ```console
-➜  BLEN git:(main) ✗ python3 BLEN.py -s poc/Jboss/Jboss_Unauthorized_access/poc.py -u xxx.xxx.xxx.xxx:xx
+➜  blen git:(main) ✗ python3 blen.py -s poc/Jboss/Unauth_Access/poc.py -u xxx.xxx.xxx.xxx:xx
 ```
 > 单个目标的漏洞验证详情(返回取决于漏洞本身，目前所有POC都是为了批量验证而设计的，single检测模式尚没有对返回结果做优化，后续会有调整)  
+
 
 ### 🍕 批量扫描模式
 
@@ -90,21 +91,21 @@ git clone --depth 1 https://github.com/openx-org/BLEN.git BLEN
 
 使用方法  
 ```sh
-➜  BLEN git:(main) ✗ python3 BLEN.py -s poc/Jboss/Jboss_Unauthorized_access/poc.py -f scan/jboss001.txt --thread 30
+➜  blen git:(main) ✗ python3 blen.py -s poc/Jboss/Unauth_Access/poc.py -f scan/jboss001.txt --thread 30
 ```
 
 
 也可以通过``,``分隔同时指定多个poc
 ```sh
-➜  BLEN git:(main) ✗ python3 BLEN.py -s poc/Jboss/Jboss_Unauthorized_access/poc.py,poc/Jenkins/Unauth_Access/poc.py,poc/Alibaba_Druid/Unauth_Access/poc.py -f scan/jboss001.txt --thread 30
+➜  blen git:(main) ✗ python3 blen.py -s poc/Jboss/Unauth_Access/poc.py,poc/Jenkins/Unauth_Access/poc.py,poc/Alibaba_Druid/Unauth_Access/poc.py -f scan/jboss001.txt --thread 30
 ```
 最后还可以通过``-s all``指定全量POC进行测试
 ```sh
-➜  BLEN git:(main) ✗ python3 BLEN.py -s all -f scan/jboss001.txt --thread 50
+➜  blen git:(main) ✗ python3 blen.py -s all -f scan/jboss001.txt --thread 50
 ```
 全量POC下测试时常较久，建议使用方式：
 * 根据自己电脑性能和带宽给到50个或更多的线程数  
-* 睡前开始扫描或出门玩儿之前打开BLEN进行全量POC测试  
+* 睡前开始扫描或出门玩儿之前打开blen进行全量POC测试  
 
 ### 🍟 单个目标的全量POC测试
 
@@ -115,7 +116,7 @@ git clone --depth 1 https://github.com/openx-org/BLEN.git BLEN
 # Single检测模式不支持全量POC，所以需要先将单个目标保存到文件中，再用批量扫描来扫描，算是曲线救国吧
 # 单个或少于十个的目标就没有必要指定线程数了，因为默认线程数是10
 echo http://xxx.xxx.com > scan/1.txt
-python3 BLEN.py -s all -f scan/1.txt
+python3 blen.py -s all -f scan/1.txt
 ```
 
 
@@ -124,7 +125,7 @@ python3 BLEN.py -s all -f scan/1.txt
 通过fofa提供的api接口获取资产清单  
 
 ```sh
-➜  BLEN git:(main) ✗ python3 BLEN.py --fofa-search
+➜  blen git:(main) ✗ python3 blen.py --fofa-search
 
 20xx-xx-xx xx:xx:xx,xxx - INFO: User : xxx@163.com | Key : xxx | 登陆成功
 请输入结果保存文件名(不必加文件后缀)：jboss001
@@ -138,7 +139,7 @@ python3 BLEN.py -s all -f scan/1.txt
 第99页获取成功
 第100页获取成功
 
-20xx-xx-xx xx:xx:xx,xxx - INFO: 搜索完毕，结果保存至/root/BLEN/scan/jboss001.txt，经去重共计9748条
+20xx-xx-xx xx:xx:xx,xxx - INFO: 搜索完毕，结果保存至/root/blen/scan/jboss001.txt，经去重共计9748条
 ```
 
 可以动态的修改user和key，无需打开配置文件调整，下次使用时直接生效不必重新输入user和key    
@@ -147,7 +148,7 @@ python3 BLEN.py -s all -f scan/1.txt
 
 ### 🍤 Ceye配置
 
-近期的版本更新中，BLEN添加了对Ceye的支持，目前已有一部分POC采用了该平台来辅助漏洞检测，默认下载BLEN之后不配置该项并不影响BLEN正常的功能使用，只是相关的POC无法按照预期运行而已，有需要可以配置下：  
+近期的版本更新中，blen添加了对Ceye的支持，目前已有一部分POC采用了该平台来辅助漏洞检测，默认下载blen之后不配置该项并不影响blen正常的功能使用，只是相关的POC无法按照预期运行而已，有需要可以配置下：  
 ```ini
 ; 在位于项目根目录下的lib/ceye.ini文件中修改dns和token两项的值
 [ceye]
@@ -337,11 +338,11 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 # 🔨 错误提交
 
-如果您在使用BLEN的过程中遇到了Bug，欢迎提Issues  
+如果您在使用blen的过程中遇到了Bug，欢迎提Issues  
 
 Issues格式：  
 ```
-触发错误的BLEN命令
+触发错误的blen命令
 测试文件
 您的运行环境（包括但不限于操作系统、python版本等）
 报错的字符串形式➕ 报错截图  
