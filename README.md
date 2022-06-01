@@ -3,13 +3,13 @@
 
 [![Python 3.x](https://img.shields.io/badge/python-3.x-yellow.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-GPLv3-brown.svg)](https://github.com/openx-org/blen/blob/main/LICENSE)
-[![POC_NUM](https://img.shields.io/badge/poc_num-162-orange.svg)](#PocSupport)
+[![POC_NUM](https://img.shields.io/badge/poc_num-165-orange.svg)](#PocSupport)
 ![GitHub Repo stars](https://img.shields.io/github/stars/openx-org/blen?color=gree)
 ![GitHub forks](https://img.shields.io/github/forks/openx-org/blen?color=blue)
 
 ## 🦌 简介
 
-1、POC数量、经过OpenxLab实验室小伙伴们的不懈努力现已有162个POC；  
+1、POC数量、经过OpenxLab实验室小伙伴们的不懈努力现已有165个POC；  
 
 2、使用python编写、跨平台、并发能力强、扫描速度非常快；  
 
@@ -171,6 +171,7 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 |ACME|mini_httpd任意文件读取漏洞(CVE-2018-18778)|``poc/ACME/File_Read_mini_httpd_CVE_2018_18778/poc.py``|
 |Alibaba_Druid|Druid未授权访问|``poc/Alibaba_Druid/Unauth_Access/poc.py``|
 |Alibaba_Nacos|Nacos未授权访问|``poc/Alibaba_Nacos/Unauth_Access/poc.py``|
+|Alibaba_Canal|AlibabaCanal弱口令漏洞|``poc/Alibaba_Canal/Weak_Pass/poc.py``|
 |Apache CouchDB|Apache Couchdb 远程权限提升(CVE-2017-12635)|``poc/Apache_CouchDB/Priv_Escalation_CVE-2017_12635/poc.py``|
 |Apache Druid|Apache Druid任意文件读取复现(CVE-2021-36749)|``poc/Apache_Druid/File_Read_CVE_2021_36749/poc.py``|
 |Apache Flink|Apache Flink目录穿透(CVE-2020-17519)|``poc/Apache_Flink/Dir_Traversal_CVE_2020_17519/poc.py``|
@@ -181,7 +182,7 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ||Apache Solr 任意文件读取漏洞|``poc/Apache_Solr/File_Read/poc.py``|
 ||Apache Solr 远程命令执行 Log4j|``poc/Apache_Solr/RCE_Log4j_CVE_2021_44228/poc.py``|
 |Alibaba_FastJson|Alibaba_FastJsonRCE_CVE_2017_18349|``poc/Alibaba_FastJsonRCE_CVE_2017_18349/poc.py``|
-|MicroSoft|MicroSoftRCE_CVE_2022_2190|``poc\MicroSoftRCE_CVE_2022_21907\poc.py``|
+|MicroSoft|MicroSoftRCE_CVE_2022_2190|``poc/MicroSoftRCE_CVE_2022_21907/poc.py``|
 |Sangfor 深信服|深信服EDR终端检测响应平台RCE漏洞(CNVD-2020-46552)|``poc/SANGFOR_深信服/RCE_2020_EDR/poc.py``|
 |碧海威 L7|碧海威 L7 弱口令漏洞|``poc/Bithighway_碧海威/Weak_Pass_L7/poc.py``|
 |BSPHP|BSPHP 未授权访问 信息泄露漏洞|``poc/BSPHP/Info_Disclosure/poc.py``|
@@ -228,6 +229,7 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 |菲力尔|FLIR-AX8 download.php 任意文件下载|``poc/FLIR_菲力尔/Download_File_AX8/poc.py``|
 |Grafana|Grafana plugins 任意文件读取漏洞(CVE-2021-43798)|``poc/Grafana/File_Read_plugins/poc.py``|
 |H2 数据库|H2 数据库 Web控制台未授权访问|``poc/H2_DataBase/UnAuth_Access/poc.py``|
+|H5S 视频平台|H5S 视频平台敏感信息泄露|``poc/H5S_视频平台/Info_Disclosure/poc.py``|
 |H3C SecPath 下一代防火墙|H3C SecPath 下一代防火墙 任意文件下载漏洞|``poc/H3C/File_Download_SecPath_WAF/poc.py``|
 |海康威视|HIKVISION 视频编码设备接入网关 任意文件下载|``poc/HIKVISION/File_Down_Gateway_downFile_php/poc.py``|
 ||HIKVISION 流媒体管理服务器弱口令|``poc/HIKVISION/Weak_Pass_Stream_Media_Manager/poc.py``|
@@ -248,6 +250,7 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ||Jetty指纹识别|``poc/Jetty/FingerPrint/poc.py``|
 ||Jetty WEB-INF 敏感信息泄露漏洞（CVE-2021-28164）|``poc/Jetty/Info_Disclosure_CVE_2021_28164/poc.py``|
 ||Jetty Utility Servlets ConcatServlet 双解码信息泄露漏洞 (CVE-2021-28169)|``poc/Jetty/Info_Disclosure_CVE_2021_28169/poc.py``|
+|JDFreeFuck|JD-FreeFuck 后台弱口令漏洞|``poc/JDFreeFuck/Weak_Pass/poc.py``|
 |金和OA|金和OA C6 download.jsp 任意文件读取漏洞|``poc/Jinher_金和OA/File_Read_download_jsp/poc.py``|
 |KEDACOM 数字系统接入网关|KEDACOM 数字系统接入网关 任意文件读取漏洞|``poc/KEDACOM_数字系统接入网关/File_Read/poc.py``|
 |金蝶OA|金蝶协同办公系统 任意文件下载漏洞|``poc/Kingdee_金蝶/File_Down_fileDownload_do/poc.py``|
@@ -322,7 +325,7 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ||Weblogic SSRF (CVE-2014-4210)|``poc/Weblogic/SSRF_CVE_2014_4210/poc.py``|
 ||Weblogic 管理控制台未授权远程命令执行漏洞（CVE-2020-14882，CVE-2020-14883）|``poc/Weblogic/UnAuth_RCE_CVE_2020_14882/poc.py``|
 ||Weblogic XMLDecoder反序列化漏洞（CVE-2017-3506）|``poc/Weblogic/XMLDecoder_CVE_2017_3506/poc.py``|
-|Flask_Ssti|Flask_Ssti_CVE-2017-12636|``poc\Flask_Ssti_CVE-2017-12636\poc.py``|
+|Flask_Ssti|Flask_Ssti_CVE-2017-12636|``poc/Flask_Ssti_CVE-2017-12636/poc.py``|
 |用友NC|用友NC6.5 BeanShell RCE|``poc/Yonyou_用友NC/RCE_BeanShell_CNVD_2021_30167/poc.py``|
 ||用友ERP-NC 目录遍历漏洞|``poc/Yonyou_用友NC/Dir_List_ERP/poc.py``|
 ||用友GRP-U8行政事业财务管理软件 SQL注入 CNNVD-201610-923|``poc/Yonyou_用友NC/Sqli_CNNVD_201610_923/poc.py``|
