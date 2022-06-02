@@ -258,6 +258,8 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 |Kyan网络监控设备|Kyan网络监控设备信息泄露|``poc/Kyan/Info_Disclosure/poc.py``|
 |蓝凌OA|蓝凌OA前台任意文件读取漏洞|``poc/Landray_蓝凌OA/File_Read_CNVD_2021_28277/poc.py``|
 |Laravel Framework|Laravel .env 配置文件泄露|``poc/Laravel_Framework/Conf_Info_Disclosure_dot_env/poc.py``|
+|Lanproxy|Lanproxy文件读取漏洞|``poc/Lanproxy/Lanproxy_File_Read/poc.py``|
+||Lanproxy弱口令漏洞|``poc/Lanproxy/Weak_Pass/poc.py``|
 |朗驰欣创|朗驰欣创视频监控系统 FTP账号密码泄露|``poc/LinkSeek_朗驰欣创/FTP_Account_Info_Disclosure/poc.py``|
 |利谱第二代防火墙|利谱第二代防火墙存在信息泄露漏洞|``poc/LiPu_利谱第二代防火墙/Info_Disclosure/poc.py``|
 |佑友|佑友防火墙 弱口令|``poc/MailGard_佑友/Weak_Pass_FireWall/poc.py``|
