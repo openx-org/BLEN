@@ -182,6 +182,7 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ||Apache Solr 任意文件读取漏洞|``poc/Apache_Solr/File_Read/poc.py``|
 ||Apache Solr 远程命令执行 Log4j|``poc/Apache_Solr/RCE_Log4j_CVE_2021_44228/poc.py``|
 |Alibaba_FastJson|Alibaba_FastJsonRCE_CVE_2017_18349|``poc/Alibaba_FastJsonRCE_CVE_2017_18349/poc.py``|
+|AtlassianConfluence 远程代码执行漏洞|AtlassianConfluence_RCE_FileServer_CVE_2022_26134|``poc/AtlassianConfluence/RCE_FileServer_CVE_2022_26134/poc.py``|
 |MicroSoft|MicroSoftRCE_CVE_2022_2190|``poc/MicroSoftRCE_CVE_2022_21907/poc.py``|
 |Sangfor 深信服|深信服EDR终端检测响应平台RCE漏洞(CNVD-2020-46552)|``poc/SANGFOR_深信服/RCE_2020_EDR/poc.py``|
 |碧海威 L7|碧海威 L7 弱口令漏洞|``poc/Bithighway_碧海威/Weak_Pass_L7/poc.py``|
