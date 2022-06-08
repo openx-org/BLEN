@@ -3,13 +3,13 @@
 
 [![Python 3.x](https://img.shields.io/badge/python-3.x-yellow.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-GPLv3-brown.svg)](https://github.com/openx-org/blen/blob/main/LICENSE)
-[![POC_NUM](https://img.shields.io/badge/poc_num-165-orange.svg)](#PocSupport)
+[![POC_NUM](https://img.shields.io/badge/poc_num-168-orange.svg)](#PocSupport)
 ![GitHub Repo stars](https://img.shields.io/github/stars/openx-org/blen?color=gree)
 ![GitHub forks](https://img.shields.io/github/forks/openx-org/blen?color=blue)
 
 ## 🦌 简介
 
-1、POC数量、经过OpenxLab实验室小伙伴们的不懈努力现已有165个POC；  
+1、POC数量、经过OpenxLab实验室小伙伴们的不懈努力现已有168个POC；  
 
 2、使用python编写、跨平台、并发能力强、扫描速度非常快；  
 
