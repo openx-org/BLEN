@@ -8,7 +8,8 @@
 [![POC_NUM](https://img.shields.io/badge/poc_num-168-orange.svg)](#PocSupport)
 ![GitHub Repo stars](https://img.shields.io/github/stars/openx-org/blen?color=gree)
 ![GitHub forks](https://img.shields.io/github/forks/openx-org/blen?color=blue)
-![image](​https://github.com/openx-org/BLEN/blob/main/img/logo.jpg​​)
+![image]
+(https://github.com/openx-org/BLEN/blob/main/img/logo.jpg​​)
 
 ## 🦌 简介
 
