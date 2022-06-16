@@ -1,5 +1,5 @@
 #  🖥 奔雷blen
-![logo]
+![image]
 (https://github.com/openx-org/BLEN/blob/main/img/logo.jpg?raw=true)
 
 
