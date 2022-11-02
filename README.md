@@ -10,14 +10,14 @@
 
 [![Python 3.x](https://img.shields.io/badge/python-3.x-yellow.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-GPLv3-brown.svg)](https://github.com/openx-org/blen/blob/main/LICENSE)
-[![POC_NUM](https://img.shields.io/badge/poc_num-168-orange.svg)](#PocSupport)
+[![POC_NUM](https://img.shields.io/badge/poc_num-174-orange.svg)](#PocSupport)
 ![GitHub Repo stars](https://img.shields.io/github/stars/openx-org/blen?color=gree)
 ![GitHub forks](https://img.shields.io/github/forks/openx-org/blen?color=blue)
 
 
 ## 🦌 简介
 
-1、POC数量、经过OpenxLab实验室小伙伴们的不懈努力现已有168个POC；  
+1、POC数量、经过OpenxLab实验室小伙伴们的不懈努力现已有174个POC；  
 
 2、使用python编写、跨平台、并发能力强、扫描速度非常快；  
 
@@ -189,12 +189,14 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 |Apache Solr|Apache Solr Velocity 注入远程命令执行漏洞 (CVE-2019-17558)|``poc/Apache_Solr/CVE_2019_17558/poc.py``|
 ||Apache Solr 任意文件读取漏洞|``poc/Apache_Solr/File_Read/poc.py``|
 ||Apache Solr 远程命令执行 Log4j|``poc/Apache_Solr/RCE_Log4j_CVE_2021_44228/poc.py``|
+||Apache Solr 未授权访问|``poc/Apache_Solr/Unauth_Access/poc.py``|
 |Alibaba_FastJson|Alibaba_FastJsonRCE_CVE_2017_18349|``poc/Alibaba_FastJsonRCE_CVE_2017_18349/poc.py``|
 |AtlassianConfluence 远程代码执行漏洞|AtlassianConfluence_RCE_FileServer_CVE_2022_26134|``poc/AtlassianConfluence/RCE_FileServer_CVE_2022_26134/poc.py``|
 |MicroSoft|MicroSoftRCE_CVE_2022_2190|``poc/MicroSoftRCE_CVE_2022_21907/poc.py``|
 |Sangfor 深信服|深信服EDR终端检测响应平台RCE漏洞(CNVD-2020-46552)|``poc/SANGFOR_深信服/RCE_2020_EDR/poc.py``|
 |碧海威 L7|碧海威 L7 弱口令漏洞|``poc/Bithighway_碧海威/Weak_Pass_L7/poc.py``|
 |BSPHP|BSPHP 未授权访问 信息泄露漏洞|``poc/BSPHP/Info_Disclosure/poc.py``|
+|Brother-MFC|Brother MFC-L2730DW series弱口令漏洞|``poc/Brother MFC-L2730DW/Weak_Pass/poc.py``|
 |C-Lodop|C-Lodop 云打印机系统平台任意文件读取漏洞|``poc/C_Lodop/File_Read/poc.py``|
 |中国电信|电信天翼网关F460 web_shell_cmd.gch 远程命令执行漏洞|``poc/China_TeleCOM_中国电信/RCE_F460_GateWay/poc.py``|
 ||大唐电信AC集中管理平台默认口令|``poc/China_TeleCOM_中国电信/Weak_Pass_DaTang_AC_Manager/poc.py``|
@@ -286,6 +288,8 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 |PHP|php v8.1开发版后门检测|``poc/php/Backdoor_v8dev/poc.py``|
 |PHPStudy|PHPStudy 后门检测|``poc/PHPStudy/Back_Door/poc.py``|
 |PHPUnit|PHPUnit eval-stdin.php 远程命令执行漏洞|``poc/PHPUnit/RCE_eval_stdin/poc.py``|
+|普元电力|电力运维云平台管理口令泄露漏洞|``poc/PuYuan/Config_info_Disclosure/poc.py``|
+|普元电力|电力运维云平台存在数据库配置信息泄露漏洞|``poc/PuYuan/Info_Disclosure/poc.py``|
 |Redis|Redis未授权访问|``poc/Redis/Unauth_Access/poc.py``|
 |锐捷|锐捷EG网关 userAuth.php存在任意文件读取漏洞|``poc/Ruijie_锐捷/File_Read_EG_userAuth/poc.py``|
 ||锐捷NBR 1300G 路由器 越权CLI命令执行漏洞|``poc/Ruijie_锐捷/RCE_NBR_1300G/poc.py``|
@@ -293,6 +297,7 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ||锐捷RG-UAC/RG-ISG统一上网行为管理审计系统存在账号密码信息泄露|``poc/Ruijie_锐捷/UPInfo_DisClosure_RG_UAC_CNVD_2021_14536/poc.py``|
 ||锐捷Smartweb管理系统 默认账户➕命令执行漏洞|``poc/Ruijie_锐捷/RCE_SmartWeb_WEB_VMS/poc.py``|
 ||锐捷云课堂主机 目录遍历漏洞|``poc/Ruijie_锐捷/Dir_List_Cloud_ClassRoom/poc.py``|
+||锐捷路由器RG-NBR800GW  未授权访问漏洞|``poc/Ruijie_锐捷/Unauth_Access/poc.py``|
 |若依后台管理系统|若依后台管理系统 弱口令|``poc/RuoYi_若依/Weak_Pass/poc.py``|
 |Samsung|三星路由器本地文件包含|``poc/Samsung/Lfi_Samsung_Wlan_AP/poc.py``|
 ||三星 WLAN AP WEA453e路由器 远程命令执行漏洞|``poc/Samsung/RCE_Samsung_WLANAP_WEA453e/poc.py``|
