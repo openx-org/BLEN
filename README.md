@@ -10,14 +10,14 @@
 
 [![Python 3.x](https://img.shields.io/badge/python-3.x-yellow.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-GPLv3-brown.svg)](https://github.com/openx-org/blen/blob/main/LICENSE)
-[![POC_NUM](https://img.shields.io/badge/poc_num-174-orange.svg)](#PocSupport)
+[![POC_NUM](https://img.shields.io/badge/poc_num-180-orange.svg)](#PocSupport)
 ![GitHub Repo stars](https://img.shields.io/github/stars/openx-org/blen?color=gree)
 ![GitHub forks](https://img.shields.io/github/forks/openx-org/blen?color=blue)
 
 
 ## 🦌 简介
 
-1、POC数量、经过OpenxLab实验室小伙伴们的不懈努力现已有174个POC；  
+1、POC数量、经过麒麟实验室小伙伴们的不懈努力现已有180个POC；  
 
 2、使用python编写、跨平台、并发能力强、扫描速度非常快；  
 
@@ -202,6 +202,7 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ||大唐电信AC集中管理平台默认口令|``poc/China_TeleCOM_中国电信/Weak_Pass_DaTang_AC_Manager/poc.py``|
 ||MAC1200R电信定制版默认弱口令|``poc/China_TeleCOM_中国电信/MAC1200R_Weak_Pass/poc.py``|
 |中国移动|中国移动 禹路由 ExportSettings.sh 敏感信息泄露漏洞|``poc/China_Mobile_中国移动/Info_Disclosure_Yu_routing_ExportSettings/poc.py``|
+|Combodo iTop|Combodo iTop信息泄露漏洞|``poc/Combodo_ITop/Info_Disclosure/poc.py``|
 |common(通用)|git信息泄露|``poc/common/Git_Info_Disclosure/poc.py``|
 ||svn信息泄露|``poc/common/Svn_Info_Disclosure/poc.py``|
 ||URL存活检测|``poc/common/Url_Alive/poc.py``|
@@ -245,14 +246,18 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 |海康威视|HIKVISION 视频编码设备接入网关 任意文件下载|``poc/HIKVISION/File_Down_Gateway_downFile_php/poc.py``|
 ||HIKVISION 流媒体管理服务器弱口令|``poc/HIKVISION/Weak_Pass_Stream_Media_Manager/poc.py``|
 ||HIKVISION 流媒体管理服务器任意文件读取|``poc/HIKVISION/File_Read_Stream_Media_Manager/poc.py``|
+|宏景|宏景人力资源信息管理系统 文件读取漏洞|``poc/HJ_宏景/File_Read/poc.py``|
 |宏电|宏电 H8922 后台任意文件读取漏洞|``poc/Hongdian_宏电/Backstage_File_Read_CVE_2021_28152/poc.py``|
 |好视通|好视通视频会议平台 任意文件下载|``poc/HST_好视通/File_Download/poc.py``|
+||好视通视频会议平台 任意文件读取|``poc/HST_好视通/File_Read/poc.py``|
 |华为|Huawei HG659 lib 任意文件读取漏洞|``poc/Huawei/File_Read_HG659_lib/poc.py``|
+|华天OA|华天动力OA sql注入漏洞|``poc/HT_华天OA/Sqli_ApiController/poc.py``|
 |Wayos AC|集中管理系统默认弱口令|``poc/WayosAC/poc.py``|
 |汇文|汇文OPAC敏感信息泄露|``poc/HuiWen_汇文/Info_Disclosure/poc.py``|
 ||汇文OPAC弱口令|``poc/HuiWen_汇文/Weak_Pass/poc.py``|
 |蜂网互联|蜂网互联 企业级路由器v4.31 密码泄露漏洞|``poc/IFW8_蜂网互联/UPInfo_DisClosure_CVE_2019_16313/poc.py``|
 |Intelbras|Intelbras Wireless 未授权与密码泄露|``poc/Intelbras/UPInfo_Disclosure_CVE_2021_3017/poc.py``|
+|佳能打印机|IRADVC3325 佳能打印机未授权访问漏洞|``poc/IRADVC3325_佳能打印机/Unauth_Access/poc.py``|
 |Jboss|Jboss未授权访问|``poc/Jboss/Unauth_Access/poc.py``|
 |Jellyfin|Jellyfin任意文件读取|``poc/jellyfin/File_Read_CVE_2021_21402/poc.py``|
 ||Jellyfin RemoteImageController.cs SSRF漏洞(CVE-2021-29490)|``poc/jellyfin/SSRF_CVE_2021_29490/poc.py``|
@@ -273,12 +278,14 @@ token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ||Lanproxy弱口令漏洞|``poc/Lanproxy/Weak_Pass/poc.py``|
 |朗驰欣创|朗驰欣创视频监控系统 FTP账号密码泄露|``poc/LinkSeek_朗驰欣创/FTP_Account_Info_Disclosure/poc.py``|
 |利谱第二代防火墙|利谱第二代防火墙存在信息泄露漏洞|``poc/LiPu_利谱第二代防火墙/Info_Disclosure/poc.py``|
+|龙软科技|龙软科技 全员考试系统信息泄露|``poc/LR_龙软科技/Info_Disclosure/poc.py``|
 |佑友|佑友防火墙 弱口令|``poc/MailGard_佑友/Weak_Pass_FireWall/poc.py``|
 ||佑友防火墙 后台命令执行漏洞|``poc/MailGard_佑友/RCE_ping_FireWall/poc.py``|
 |迈普 ISG1000安全网关|迈普 ISG1000安全网关 任意文件下载漏洞|``poc/MaiPu_迈普/File_Download_webui/poc.py``|
 |MC573|MC573未授权访问|``poc/MC573/UnAuth_MC573/poc.py``|
 |MessageSolution企业邮件归档管理系统|MessageSolution企业邮件归档管理系统 EEA 信息泄露|``poc/MessageSolution/Info_Disclosure/poc.py``|
 |MetaBase|MetaBase任意文件读取漏洞 CVE-2021-41277|``poc/Metabase/File_Read_CVE_2021_41277/poc.py``|
+|木云科技|资源统一管理平台未授权访问漏洞|``poc/MY_木云科技/Unauth_Access/poc.py``|
 |蓝海卓越|蓝海卓越计费管理系统 任意文件读取|``poc/NatShell_蓝海卓越/File_Read/poc.py``|
 ||蓝海卓越计费管理系统 认证hash泄露|``poc/NatShell_蓝海卓越/HashInfo_DisClosure/poc.py``|
 |中科网威|中科网威 下一代防火墙控制系统 账号密码泄露漏洞|``poc/NetPower_中科网威/UPInfo_DisClosure_Firewall/poc.py``|
