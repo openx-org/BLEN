@@ -374,3 +374,5 @@ Issues格式：
 报错的字符串形式➕ 报错截图  
 ```
 
+``访客数统计``  
+![Visitor Count](https://profile-counter.glitch.me/openx-org-BLEN/count.svg)  
