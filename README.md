@@ -373,3 +373,6 @@ Issues格式：
 您的运行环境（包括但不限于操作系统、python版本等）
 报错的字符串形式➕ 报错截图  
 ```
+
+``访客数统计``  
+![Visitor Count](https://profile-counter.glitch.me/openx-org/BLEN/count.svg)
