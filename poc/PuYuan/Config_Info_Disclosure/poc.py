@@ -56,7 +56,7 @@ class POC(POCBase):
             检测逻辑，漏洞存在则修改vuln值为True，漏洞不存在则不动
             """
             req = requests.get(url,headers = headers , proxies = self.proxy ,timeout = self.timeout,verify = False)
-            if "MQTT_USERNAME:'admin'" and "MQTT_KEY:'Acrel001'"in req.text:#req.status_code == 200 and :
+            if "MQTT_USERNAME:'admin'" and "MQTT_KEY:'Acrel001'"in req.text and req.status_code == 200 :
                 vuln = [True,req.text]
             else:
                 vuln = [False,req.text]
